@@ -1,0 +1,115 @@
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+     padding: 2rem 2rem 0rem 2rem;
+    height: 623px;
+    background: radial-gradient(ellipse, #0950a0e5 0%, #05011f 80%);
+  
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+      line-height: 5rem;
+    }
+  
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #b0c3d9;
+      max-width: 900px;
+      margin-bottom: 2rem;
+    }
+  
+    .header-buttons {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+  
+      .build-idea-button,
+      .watch-video-button {
+        background-color: #F47622;
+        color: #FFFFFF;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 0.02em;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2%;
+        border-radius: 12px;
+      }
+  
+      .build-idea-button {
+        background-color: #ff6a3d;
+        color: #ffffff;
+        border-radius: 8px;
+  
+        &:hover {
+          background-color: #ff5a2d;
+        }
+      }
+      div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:12px;
+        height: 60px;
+        .watch-video-button {
+            background-color: #ffffff;
+            color: #ff6a3d;
+            border: 2.5px solid #ff6a3d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            .play-icon {
+              font-size: 1.2rem;
+              color: #ff6a3d;
+            }
+      
+            &:hover {
+              background-color:transparent;
+              color: #ffffff;
+            }
+          }
+          span{
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 0.02em;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2%;
+            color: #ffffff;
+          }
+      }
+
+    }
+  
+    .tech-icons {
+      display: flex;
+      background-color:#01010899;
+      height: 160px;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      border: 2px solid #90909299;
+      .icon {
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+       
+        img{
+            // width: 69.28px;
+            height: 60px;
+        }
+      }
+    }
+  }
+  

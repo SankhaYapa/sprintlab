@@ -1,0 +1,116 @@
+.wwa-section {
+    padding: 4rem;
+    background: radial-gradient(ellipse, #030216 0%, #030216 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    .wwa-section-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      
+      .wwa-section-wrapper-header {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        
+        h2 {
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+            letter-spacing: 0.1em;
+          .section-number {
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #ff6a3d;
+          }
+        }
+        .gradient-line {
+            width: 61.881rem;
+            height: 1px; /* Adjust height as needed */
+            background: linear-gradient(to right, rgb(76, 78, 104), black);
+        }
+      }
+  
+      .wwa-section-wrapper-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4.625rem;
+        
+        .wwa-text {
+          flex: 1;
+          
+          h3 {
+            font-size:1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 0.02em;
+          }
+  
+          p {
+            font-size: 1rem;
+            color: #b0c3d9;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+          }
+  
+          .cta-button {
+            background-color: #F47622;
+            color: #FFFFFF;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 0.02em;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 2%;
+            height: 60px;
+            border-radius: 12px;
+            &:hover {
+              background-color: #ff5a2d;
+            }
+          }
+        }
+  
+        .wwa-image {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            
+            // Blue border div
+            &::before {
+              content: '';
+              position: absolute;
+              top: -15px;
+              left: -15px;
+              width: 28.197rem;
+              height: 18.466rem;
+              background-color: #40b3ff;
+              border-radius: 12px;
+              transform: rotate(-6deg);
+              z-index: 0;
+              box-shadow: -20px 18px 100px rgba(4, 171, 248, 0.5); // 30% opacity shadow
+            }
+    
+            img {
+              position: relative;
+              width: 25.729rem;
+              height: 16.243rem;
+              border-radius: 12px;
+              transform: rotate(-2deg);
+              z-index: 1;
+            }
+          }
+      }
+    }
+  }
+  
