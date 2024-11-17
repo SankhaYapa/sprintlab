@@ -1,0 +1,130 @@
+.our-result-section {
+    padding: 4rem;
+    background-color: #030216;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    height: 614px;
+  
+    .our-result-wrapper {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+  
+      .result-header {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        gap: 15px;
+  
+        .section-number {
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #ff6a3d;
+        }
+  
+        h2 {
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+            letter-spacing: 0.1em;
+        }
+  
+        .gradient-line {
+     
+            height: 1px;       
+            width: 51.881rem;
+              background: linear-gradient(to right, rgb(76, 78, 104), black);
+        }
+      }
+  
+      .result-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 0.02em;
+        }
+  
+        span {
+            color: #ffffff;
+            font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 0.02em;
+            text-align: center;
+            max-width: 1000px;
+        }
+  
+        .testimonials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 4rem;
+  
+          .testimonial-card {
+            background: #1e1f3f;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+            // overflow: hidden;
+            .profileimg {
+              border-radius: 50%;
+              width: 80px;
+              height: 80px;
+              margin-bottom: 1rem;
+              object-fit: cover;
+              position: relative;
+              top: 50%; /* Push image down */
+              transform: translateY(-80%);
+            }
+            div{
+                margin-top: -30px;
+                .comma{
+                    margin-top: -50px;
+                    width:49px;
+                    height: 42px;
+                }
+            }
+           
+            .quote {
+             
+              font-family: "Inter", sans-serif;
+              color:#FFFFFF ;
+              font-size: 1.5rem;
+              font-weight: 700;
+            
+            }
+  
+            h3 {
+                font-family: "Inter", sans-serif;
+              font-size: 1.2rem;
+              font-weight: 700;
+              color: #C6C6C6;
+             margin: 0;
+            }
+  
+            span {
+            
+              font-family: "Inter", sans-serif;
+              font-size: 1rem;
+              font-weight: 400;
+              color: #C6C6C6;
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,10 +1,11 @@
 .our-process {
     padding: 4rem;
-    background: radial-gradient(circle, #27AED8 0%, #05011f 30%);
+    background-color: #030216;
     color: #ffffff;
     display: flex;
     justify-content: center;
     height: 961px;
+    
     .our-process-wrapper{
         max-width: 1200px;
         width: 100%;
@@ -43,13 +44,13 @@
             flex-direction: column;
             align-items: center;
            
-            h1 {
-                font-size: 2.5rem;
+            h2 {
+                font-size: 2.25rem;
                 font-weight: 700;
                 color: #ffffff;
                 font-family: "Open Sans", sans-serif;
                 letter-spacing: 0.02em;
-                font-size: 2.25rem;
+                
               }
               span {
                 color: #ffffff;
@@ -60,48 +61,91 @@
             .process-steps {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-                max-width: 1000px;
-                width: 100%;
+                gap: 8rem;
+                row-gap: 3rem;
+                // max-width: 1000px;
+                // width: 100%;
                 justify-content: center;
-                margin-top: 2rem;
+                margin-top: 3rem;
+                background: radial-gradient(circle, #185466 0%, #030216 40%);
+            
                 .process-step {
                 //   background: radial-gradient(circle, rgba(45,45,79,1) 0%, rgba(31,30,51,1) 100%);
-                  padding: 2rem;
-                  border-radius: 12px;
-                  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-                  border: 2px solid #f0f0f066;
-                  h3 {
-                    font-size: 1.5rem;
-                    color: #ffffff;
-                    margin-bottom: 0.5rem;
+           
+                position: relative;
+                z-index: 2;
+                  &:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width:28.125rem;
+                    height:18.75rem;
+                    background-color: #40b3ff;
+                    border-radius: 12px;
+                    transform: rotate(5deg);
+                     z-index: 0;
+                  
+                     padding:2rem;
                   }
-            
-                  h4 {
-                    font-size: 1.25rem;
-                    color: #ffffff;
-                    font-weight: 600;
-                    margin-bottom: 1rem;
-                  }
-            
-                  ul {
-                    list-style: none;
-                    padding: 0;
-            
-                    li {
-                      font-size: 1rem;
-                      color: #b0c3d9;
-                      line-height: 1.5;
-                      margin-bottom: 0.5rem;
-                      display: flex;
-                      align-items: center;
-            
-                      &:before {
-                        content: "→";
-                        color: #ffffff;
-                        margin-right: 0.5rem;
-                      }
+          
+                  div{
+                    padding:2rem;
+                    border-radius: 12px;
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                    border: 2px solid #f0f0f066;
+                    width:28.125rem;
+                    height:18.75rem;
+                    position: relative;
+                    z-index: 2;
+                    // background-color: red;
+                    &:hover{
+                        background-color:#030216;
                     }
+                    h3 {
+                        font-size: 1rem;
+                        color: #ffffff;
+                        margin: 0;
+                        position: relative;
+                        z-index: 2;
+                        font-family: "Open Sans", sans-serif;
+                        letter-spacing: 0.02em;
+                        font-weight: 600;
+                      }
+                
+                      h4 {
+                        font-size: 1.125rem;
+                        color: #ffffff;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                        position: relative;
+                        z-index: 2;
+                        font-family: "Open Sans", sans-serif;
+                        letter-spacing: 0.02em;
+                        font-weight: 400;
+                      }
+                
+                      ul {
+                        list-style: none;
+                        padding: 0;
+                        position: relative;
+                        z-index: 2;
+                        
+                        li {
+                          font-size: 1rem;
+                          color: #ffffff;
+                          line-height: 1.5;
+                          margin-bottom: 0.5rem;
+                          display: flex;
+                          align-items: center;
+                
+                          &:before {
+                            content: "→";
+                            color: #ffffff;
+                            margin-right: 0.5rem;
+                          }
+                        }
+                      }
                   }
                 }
               }

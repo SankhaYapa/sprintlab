@@ -1,0 +1,104 @@
+.why-us {
+  
+    padding: 4rem;
+    background-color: #030216;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle at 40% 50%, #1b677e 0%, #030216 30%); /* Moved circle slightly left */
+    .why-us-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  
+      .why-us-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 2rem;
+  
+        h2 {
+          font-weight: 400;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          color: #ffffff;
+          letter-spacing: 0.1em;
+  
+          .section-number {
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #ff6a3d;
+          }
+        }
+  
+        .gradient-line {
+          width: 60%;
+          height: 1px;
+          background: linear-gradient(to right, rgb(76, 78, 104), black);
+        }
+      }
+  
+      .why-us-content {
+        text-align: center;
+     
+        h2 {
+          font-size: 2.25rem;
+          font-weight: 700;
+          color: #ffffff;
+          font-family: "Open Sans", sans-serif;
+          margin-bottom: 1rem;
+        }
+  
+        span {
+          color: #ffffff;
+          font-size: 1rem;
+          font-family: "Poppins", sans-serif;
+          margin-bottom: 3rem;
+          display: block;
+        }
+  
+        .why-us-cards {
+          display: flex;
+          gap: 2rem;
+          justify-content: center;
+  
+          .why-us-card {
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            display: flex; /* Enables flexbox */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: center; /* Centers content vertically */
+            align-items: center; /* Centers content horizontally */
+            width: 359px;
+            height: 307px;
+            background: rgba(255, 255, 255, 0.1); /* Transparent white for the glass effect */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+            border: 1px solid rgba(255, 255, 255, 0.705); /* Subtle border for glass look */
+          
+            h3 {
+              font-size: 1.25rem;
+              font-weight: 700;
+              color: #ffffff;
+              margin-bottom: 1rem;
+              font-family: "Inter", sans-serif;
+            }
+          
+            p {
+              font-size: 1rem;
+              color: #ffffff;
+              line-height: 1.5;
+              font-family: "Inter", sans-serif;
+              font-weight: 700;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+  

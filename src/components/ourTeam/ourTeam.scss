@@ -1,0 +1,207 @@
+
+.our-team-container{
+  padding: 4rem;
+  background-color: #030216;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 614px;
+  
+
+  .our-team-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    .section-header {
+      display: flex;
+      text-align: left;
+      align-items: center;
+      gap: 15px;
+      .section-number {
+          font-weight: 400;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          color: #ff6a3d;
+      }
+
+      h2 {
+          font-weight: 400;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          color: #ffffff;
+          letter-spacing: 0.1em;
+      }
+
+      .gradient-line {
+   
+        height: 1px;
+        
+        width: 51.881rem;
+       
+          background: linear-gradient(to right, rgb(76, 78, 104), black);
+      }
+    }
+
+
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      align-items: center;
+      div{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+        .card {
+          width: 93px;
+          height: 329px;
+          border-radius: 40px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          background-color: #1c1c1c;
+          color: #fff;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          position: relative;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 2, 2, 0.5); // Black overlay with 50% opacity
+          z-index: 1;
+          transition: all 0.3s ease-in-out;
+          opacity: 0; // Hidden by default
+        }
+        .card {
+        
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); // Black overlay with 50% opacity
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+             opacity: 0.6; // Hidden by default
+             position: absolute;
+          }
+
+      
+        img {
+          position: absolute;
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+ 
+          .iconprofile{
+            position: absolute;
+            height: 54px;
+            width: 56px;
+            bottom: 15px;
+            left: 20px;
+          }
+        }
+      }
+        .card-info {
+          padding: 1rem;
+       
+          .iconprofile{
+            position: absolute;
+            height: 54px;
+            width: 56px;
+            bottom: 15px;
+            left: 20px;
+            z-index: 2;
+          }
+        }
+        
+        .card h3 {
+          margin: 0.5rem 0;
+          font-size: 1.25rem;
+          // position: absolute;
+        }
+        
+        .card p {
+          font-size: 1rem;
+          margin: 0;
+          // position: absolute;
+        }
+        .card.expanded h3 {
+          margin: 0.5rem 0;
+          font-size: 1.25rem;
+          position: absolute;
+          bottom: 30px;
+          left: 100px;   z-index: 2;
+        }
+        
+        .card.expanded p {
+          font-size: 1rem;
+          margin: 0;
+           position: absolute;
+           bottom: 15px;
+           left: 100px;
+           z-index: 2;
+        }
+        /* Expanded state */
+        .card.expanded {
+          width: 370px;
+          
+          // height: 400px;
+          .iconprofile{
+            position: absolute;
+            height: 54px;
+            width: 56px;
+            bottom: 15px;
+            left: 30px;
+            z-index: 2;
+          }
+         
+        }
+        
+        .card.expanded img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          
+        }
+        // .card.expanded img::before {
+        //   content: "";
+        //   display: block;
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   width: 100%;
+        //   height: 100%;
+        //   background-color: rgba(0, 0, 0, 0.5); /* Change the color and opacity as needed */
+        // }
+      }
+    }
+    
+    
+    
+  }
+}
+
+
+
+
+
+
+
+
+

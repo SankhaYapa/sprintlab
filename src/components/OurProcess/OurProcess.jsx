@@ -17,6 +17,7 @@ export const OurProcess = () => {
         <div className="process-steps">
             {[1, 2, 3, 4].map((step, index) => (
             <div className="process-step" key={index}>
+                <div>
                 <h3>0{step}</h3>
                 <h4>Discovery & Research</h4>
                 <ul>
@@ -24,6 +25,8 @@ export const OurProcess = () => {
                 <li>Identify project goals and requirements.</li>
                 <li>Develop a detailed project plan and timeline.</li>
                 </ul>
+                </div>
+                
             </div>
             ))}
         </div>
