@@ -79,7 +79,9 @@
             text-decoration: none;
             font-size: 1rem;
             transition: color 0.3s ease;
-  
+            font-size: 1rem;
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
             &:hover {
               color: #ff6a3d;
             }
@@ -95,7 +97,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-  
+        p{
+            font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
       .footer-policies {
         display: flex;
         gap: 1.5rem;
