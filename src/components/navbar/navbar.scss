@@ -1,51 +1,108 @@
-.main-navbar-container{
+.main-navbar-container {
     background-color: #030216;
     display: flex;
     justify-content: center;
     align-items: center;
+    // position: sticky;
     top: 0;
-    // width: 100vw;
+    width: 100vw;
     height: 154px;
-   
-    .main-navbar-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1160vw;
-        gap: 121px;
-        .logo-container{
 
-            img{
-                width: 88.04px;
-                height: 54px;
+    .main-navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%; // Reduce width for better responsiveness
+        max-width: 1160px;
+        gap: 20px; // Adjust gap for smaller screens
+        margin-left: 50px;
+        margin-right: 50px;
+        .logo-container {
+            img {
+                width: 80px; // Scale logo for smaller screens
+                height: auto;
             }
-          
         }
-        .menu-container{
+
+        .menu-container {
             display: flex;
-            gap: 60px;
-            span{
+            gap: 30px; // Reduce gap between menu items
+            flex-wrap: wrap; // Allow items to wrap on smaller screens
+
+            span {
                 font-family: "Inter", sans-serif;
-                font-optical-sizing: auto;
-                color:#FFFFFF ;
+                color: #ffffff;
                 font-size: 14px;
                 font-weight: 600;
                 cursor: pointer;
+
+                &:hover {
+                    color: #f47622; // Add hover effect for better UX
+                }
             }
         }
-        .header-button{
-            button{
-                background-color: #F47622;
-                color: #FFFFFF;
+
+        .header-button {
+            button {
+                background-color: #f47622;
+                color: #ffffff;
                 font-family: "Poppins", sans-serif;
                 letter-spacing: 0.02em;
-                font-size: 16px;
+                font-size: 14px; // Adjust font size for smaller screens
                 font-weight: 600;
-                letter-spacing: 2%;
-                height: 60px;
+                height: 50px; // Reduce button height
                 border-radius: 12px;
+                padding: 0 20px; // Adjust padding for smaller screens
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.9;
+                }
             }
         }
     }
-  
+
+    // Responsive adjustments
+    @media (max-width: 768px) {
+        height: auto;
+      
+
+        .main-navbar-wrapper {
+            flex-direction: column; // Stack items vertically
+            gap: 15px;
+
+            .menu-container {
+                justify-content: center;
+                gap: 10px;
+                span {
+                    font-size: 12px; // Smaller font size for mobile
+                }
+            }
+
+            .header-button {
+                button {
+                    width: 100%; // Full-width button for mobile
+                    font-size: 12px;
+                    height: 40px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .menu-container {
+            flex-direction: column; // Stack menu items vertically
+            align-items: center;
+           
+        }
+        .header-button {
+            button {
+                width: 100%; // Full-width button for mobile
+                font-size: 12px;
+                height: 40px;
+                border-radius: 5px;
+            }
+        }
+    }
 }

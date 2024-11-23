@@ -18,12 +18,12 @@ function App() {
       <HeaderSection></HeaderSection> 
       <WWASection></WWASection>
       <OurProcess></OurProcess>
-      <PIPSection></PIPSection>
+      {/* <PIPSection></PIPSection>
       <OurResultSection></OurResultSection>
       <WhyUsSection></WhyUsSection>
       <OurTeam></OurTeam>
       <FAQSSection></FAQSSection>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
     </>
   )
