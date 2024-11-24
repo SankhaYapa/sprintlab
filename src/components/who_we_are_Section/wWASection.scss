@@ -5,6 +5,7 @@
   justify-content: center;
   height: auto;
   width: 100vw;
+  padding-top: 50px;
   .wwa-section-wrapper {
     max-width: 1200px;
     width: 100%;
@@ -13,7 +14,7 @@
     gap: 5rem;
     margin-top: 20px;
     margin-bottom: 50px;
-    margin-left: 50px;
+    margin-left:50px;
     margin-right: 50px;
     .wwa-section-wrapper-header {
       text-align: left;
@@ -200,10 +201,12 @@
 
   /* Extra Small Mobile View */
   @media (max-width: 480px) {
- 
+  
     .wwa-section-wrapper {
       gap: 2rem;
-
+      width: calc(100vw - 25px);
+      margin-left:0px;
+      margin-right: 0px;
       .wwa-section-wrapper-header {
         .gradient-line {
           width:40%;

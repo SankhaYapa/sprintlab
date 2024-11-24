@@ -1,17 +1,18 @@
 .our-process {
-background-color: #030216;
+
+  background-color: #030216;
   color: #ffffff;
   display: flex;
   justify-content: center;
-  height: 961px;
+  height: auto; /* Allow height to adjust dynamically */
   width: 100vw;
   .our-process-wrapper {
     max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    align-items: center; /* Ensure the content is centered on smaller screens */
+    margin-top: 40px;
     margin-left: 50px;
     margin-right: 50px;
     .process-header {
@@ -19,6 +20,7 @@ background-color: #030216;
       text-align: left;
       align-items: center;
       gap: 15px;
+      width: 100%;
       h2 {
         font-weight: 400;
         font-family: "Inter", sans-serif;
@@ -33,10 +35,34 @@ background-color: #030216;
           color: #ff6a3d;
         }
       }
+
       .gradient-line {
-        width: 61.881rem;
+        flex: 1; 
         height: 1px;
         background: linear-gradient(to right, rgb(76, 78, 104), black);
+      }
+
+      @media (max-width: 768px) {
+
+        h2 {
+          font-weight: 14px;
+          .section-number{
+            font-weight: 14px;
+          }
+        }
+        .gradient-line {
+          width: 50%; /* Makes the gradient line shorter on medium screens */
+          margin: 1rem auto; /* Centers the line */
+        }
+      }
+
+      @media (max-width: 480px) {
+        h2 {
+          font-weight: 14px;
+        }
+        .gradient-line {
+          width: 40%; /* Further reduce the gradient line width on small screens */
+        }
       }
     }
 
@@ -53,36 +79,57 @@ background-color: #030216;
         font-family: "Open Sans", sans-serif;
         letter-spacing: 0.02em;
       }
+
       span {
         color: #ffffff;
         font-size: 1.125rem;
         font-family: "Poppins", sans-serif;
         letter-spacing: 0.02em;
       }
+
       .process-steps {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8rem;
-        row-gap: 3rem;
+        row-gap: 4rem;
         justify-content: center;
         margin-top: 3rem;
         background: radial-gradient(circle, #185466 0%, #030216 40%);
 
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(1, 1fr); /* Stack process steps vertically on tablets */
+          gap: 3rem;
+          background: radial-gradient(circle, #030216 0%, #030216 40%);
+         
+        }
+
+        @media (max-width: 480px) {
+          grid-template-columns: repeat(1, 1fr); /* Stack process steps vertically on small screens */
+          gap: 3rem;
+          margin-top: 2rem;
+          background: radial-gradient(circle, #030216 0%, #030216 40%);
+         
+        }
+
         .process-step {
           position: relative;
           z-index: 2;
+
           &:hover::before {
             content: '';
             position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 28.125rem;
-            height: 18.75rem;
+            top: 0;
+            left: 0;
+            // width: 28.125rem;
+            // height: 18.75rem;
+            width: 82%;
+            height:  80%;
             background-color: #40b3ff;
             border-radius: 12px;
             transform: rotate(5deg);
             z-index: 0;
             padding: 2rem;
+           
           }
 
           div {
@@ -90,10 +137,11 @@ background-color: #030216;
             border-radius: 12px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             border: 2px solid #f0f0f066;
-            width: 28.125rem;
-            height: 18.75rem;
+            width: 82%;
+            height:  83%;
             position: relative;
             z-index: 2;
+
             &:hover {
               background-color: #030216;
             }
@@ -102,6 +150,8 @@ background-color: #030216;
               font-size: 1rem;
               color: #ffffff;
               margin: 0;
+              position: relative;
+              z-index: 2;
               font-family: "Open Sans", sans-serif;
               letter-spacing: 0.02em;
               font-weight: 600;
@@ -112,13 +162,18 @@ background-color: #030216;
               color: #ffffff;
               font-weight: 600;
               margin-bottom: 1rem;
+              position: relative;
+              z-index: 2;
               font-family: "Open Sans", sans-serif;
               letter-spacing: 0.02em;
+              font-weight: 400;
             }
 
             ul {
               list-style: none;
               padding: 0;
+              position: relative;
+              z-index: 2;
 
               li {
                 font-size: 1rem;
@@ -135,99 +190,155 @@ background-color: #030216;
                 }
               }
             }
+            @media (max-width: 768px) {
+             
+              h3 {
+               font-size: 14px;
+              }
+              h4{
+                font-size: 14px;
+              }
+              ul {
+              
+  
+                li {
+                  font-size: 12px;
+                  color: #ffffff;
+                  line-height: 1.5;
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  align-items: center;
+  
+                  &:before {
+                    content: "→";
+                    color: #ffffff;
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
+            }
+      
+            @media (max-width: 480px) {
+             
+              h3 {
+                font-size: 14px;
+              }
+              h4{
+                font-size: 14px;
+              }
+              ul {
+              
+  
+                li {
+                  font-size: 12px;
+                  color: #ffffff;
+                  line-height: 1.5;
+                  margin-bottom: 0.5rem;
+                  display: flex;
+                  // align-items: center;
+  
+                  &:before {
+                    content: "→";
+                    color: #ffffff;
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
+            }
           }
+        }
+      }
+      @media (max-width: 768px) {
+      
+        h2 {
+          display: none;
+        }
+        span {
+          font-size: 12px;
+          text-align: start;
+          // margin-left: -50px;
+        }
+      }
+
+      @media (max-width: 480px) {
+       
+        h2 {
+          display: none;
+        }
+        span {
+          font-size: 12px;
+          text-align: start;
+          // margin-left: -50px;
         }
       }
     }
   }
-
-  @media screen and (max-width: 1200px) {
-    .our-process {
-      padding: 3rem;
-      height: auto;
-    }
-
-    .process-header h2 {
-      font-size: 0.9rem;
-    }
-
+  @media (max-width: 480px) {
     .our-process-wrapper {
-      max-width: 100%;
-      padding: 0 2rem;
-    }
-
-    .process-steps {
-      grid-template-columns: 1fr;
-      gap: 4rem;
-    }
-
-    .process-step div {
-      width: 100%;
-      height: auto;
-    }
-
-    h2 {
-      font-size: 1.875rem;
-    }
-
-    span {
-      font-size: 1rem;
-    }
+      width: calc(100vw - 25px);
+      margin-left:0px;
+      margin-right: 0px;
+        }
   }
+  /* Mobile View (max-width: 480px) */
+  // @media (max-width: 768px) {
+    
 
-  @media screen and (max-width: 768px) {
-    .our-process-wrapper {
-      padding: 0 1rem;
-    }
+  //   .our-process-wrapper {
+  //     // max-width: 100%;
+  //   }
 
-    .process-header h2 {
-      font-size: 0.8rem;
-    }
+  //   .process-header {
+  //     flex-direction: column;
+  //     text-align: center;
 
-    .process-steps {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
+  //     .gradient-line {
+  //       width: 50%; /* Smaller gradient line for mobile view */
+  //       margin: 1rem auto;
+  //     }
+  //   }
 
-    .process-step div {
-      width: 100%;
-      height: auto;
-    }
+  //   .our-process-bottom {
+  //     h2 {
+  //       font-size: 1.75rem;
+  //     }
 
-    h2 {
-      font-size: 1.5rem;
-    }
+  //     span {
+  //       font-size: 1rem;
+  //     }
 
-    span {
-      font-size: 0.875rem;
-    }
-  }
+  //     .process-steps {
+  //       grid-template-columns: 1fr; /* Stack the steps vertically */
+  //       gap: 3rem;
+  //       background: radial-gradient(circle, #030216 0%, #030216 40%);
+  //     }
+  //   }
+  // }
 
-  @media screen and (max-width: 480px) {
-    .our-process-wrapper {
-      padding: 0 1rem;
-    }
+  // /* Extra Small Mobile View (max-width: 480px) */
+  // @media (max-width: 480px) {
+    
+  //   .process-header {
+  //     text-align: center;
+  //     .gradient-line {
+  //       width: 40%; /* Smaller gradient line on very small screens */
+  //     }
+  //   }
 
-    .process-header h2 {
-      font-size: 0.75rem;
-    }
+  //   .our-process-bottom {
+  //     h2 {
+  //       font-size: 1.5rem; /* Reduce font size for smaller screens */
+  //     }
 
-    .process-steps {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+  //     span {
+  //       font-size: 0.875rem;
+  //     }
 
-    .process-step div {
-      width: 100%;
-      height: auto;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-    }
-
-    span {
-      font-size: 0.875rem;
-    }
-  }
+  //     .process-steps {
+  //       gap: 2.5rem; /* Adjust gap between process steps */
+  //       background: radial-gradient(circle, #030216 0%, #030216 40%);
+        
+  //     }
+  //   }
+  // }
 }

@@ -1,108 +1,128 @@
 .main-navbar-container {
-    background-color: #030216;
+  background-color: #030216;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100vw;
+  height: 154px;
+
+  .main-navbar-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    // position: sticky;
-    top: 0;
-    width: 100vw;
-    height: 154px;
+    width: 90%;
+    max-width: 1160px;
 
-    .main-navbar-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%; // Reduce width for better responsiveness
-        max-width: 1160px;
-        gap: 20px; // Adjust gap for smaller screens
-        margin-left: 50px;
-        margin-right: 50px;
-        .logo-container {
-            img {
-                width: 80px; // Scale logo for smaller screens
-                height: auto;
-            }
-        }
-
-        .menu-container {
-            display: flex;
-            gap: 30px; // Reduce gap between menu items
-            flex-wrap: wrap; // Allow items to wrap on smaller screens
-
-            span {
-                font-family: "Inter", sans-serif;
-                color: #ffffff;
-                font-size: 14px;
-                font-weight: 600;
-                cursor: pointer;
-
-                &:hover {
-                    color: #f47622; // Add hover effect for better UX
-                }
-            }
-        }
-
-        .header-button {
-            button {
-                background-color: #f47622;
-                color: #ffffff;
-                font-family: "Poppins", sans-serif;
-                letter-spacing: 0.02em;
-                font-size: 14px; // Adjust font size for smaller screens
-                font-weight: 600;
-                height: 50px; // Reduce button height
-                border-radius: 12px;
-                padding: 0 20px; // Adjust padding for smaller screens
-                cursor: pointer;
-
-                &:hover {
-                    opacity: 0.9;
-                }
-            }
-        }
-    }
-
-    // Responsive adjustments
-    @media (max-width: 768px) {
+    .logo-container {
+      img {
+        width: 80px;
         height: auto;
-      
-
-        .main-navbar-wrapper {
-            flex-direction: column; // Stack items vertically
-            gap: 15px;
-
-            .menu-container {
-                justify-content: center;
-                gap: 10px;
-                span {
-                    font-size: 12px; // Smaller font size for mobile
-                }
-            }
-
-            .header-button {
-                button {
-                    width: 100%; // Full-width button for mobile
-                    font-size: 12px;
-                    height: 40px;
-                    border-radius: 5px;
-                }
-            }
-        }
+      }
     }
 
-    @media (max-width: 480px) {
-        .menu-container {
-            flex-direction: column; // Stack menu items vertically
-            align-items: center;
-           
-        }
-        .header-button {
-            button {
-                width: 100%; // Full-width button for mobile
-                font-size: 12px;
-                height: 40px;
-                border-radius: 5px;
-            }
-        }
+    .hamburger-icon {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: auto;
+      }
+
+      .close-icon {
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+      }
     }
+
+    .menu-container {
+      display: flex;
+      gap: 50px;
+
+      span {
+        font-family: "Inter", sans-serif;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          color: #f47622;
+        }
+      }
+    }
+
+    .header-button {
+      button {
+        background-color: #f47622;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 0.02em;
+        font-size: 14px;
+        font-weight: 600;
+        height: 50px;
+        border-radius: 12px;
+        padding: 0 20px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  // Mobile Styles
+  @media (max-width: 920px) {
+    height: 100px;
+    .main-navbar-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .hamburger-icon {
+        display: flex;
+      }
+
+      .menu-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #030216fa;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 120px;
+        display: none;
+        z-index: 99;
+        &.menu-open {
+          display: flex;
+        }
+
+        .close-icon {
+          position: absolute;
+          top: 40px;
+          right: 40px;
+          font-size: 30px;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        span {
+          font-size: 20px;
+          margin-left:70px ;
+
+        //   
+        }
+      }
+
+      .header-button{
+          display: none;
+      }
+    }
+  }
 }
